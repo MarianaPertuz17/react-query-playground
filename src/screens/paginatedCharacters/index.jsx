@@ -14,7 +14,7 @@ export function PaginatedCharacters () {
     isFetching, 
     isError, 
     error, 
-  } = useQuery(['characters'], () => getCharactersPaginated(page), { keepPreviousData: true})
+  } = useQuery(['characters', page], () => getCharactersPaginated(page), { keepPreviousData: true})
 
   if (isFetching) return <p>Loading...</p>
   if (isError) return <p>{error.message}</p>
