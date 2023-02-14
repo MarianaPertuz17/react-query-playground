@@ -4,3 +4,15 @@
   justify-content: space-around;
   row-gap: 50px;
 }
+
+.buttonContainer {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  height: 8vh;
+  min-width: 10vw;
+  cursor: pointer;
+}

@@ -20,17 +20,18 @@ export function PaginatedCharacters () {
   if (isError) return <p>{error.message}</p>
   
   return (
-    <div>
+    <>
       <div className={styles.container}>
         {data.characters.results.map(character => <CharacterCard key={character.id} character={character}/>)}
-      </div>   
-      {data.previousPage && (
-        <button onClick={() => setPage(data.previousPage)}>Previous</button>
-      )}{" "}
-      {data.nextPage && (
-        <button onClick={() => setPage(data.nextPage)}>Next</button>
-      )}
-
-    </div>    
+      </div>
+      <div className={styles.buttonContainer}>
+        {data.previousPage && (
+          <button onClick={() => setPage(data.previousPage)}>Previous</button>
+        )}
+        {data.nextPage && (
+          <button onClick={() => setPage(data.nextPage)}>Next</button>
+        )}
+      </div>
+    </>    
   )
 }
