@@ -2,19 +2,19 @@ import axios from "axios"
 
 export function getCharacters() {
   return axios
-    .get("https://rickandmortyapi.com/api/character", { params: { _sort: "title" } })
+    .get("https://rickandmortyapi.com/api/character")
     .then(res => res.data)
 }
 
 export function getCharactersPaginated(page) {
   return axios
     .get("https://rickandmortyapi.com/api/character", {
-      params: { _page: page, _sort: "title", _limit: 2 },
+      params: { page: page },
     })
     .then(res => {
-      const hasNext = page * 2 <= parseInt(res.headers["x-total-count"])
+      console.log(res.data, 'data')
       return {
-        nextPage: hasNext ? page + 1 : undefined,
+        nextPage: res.data.info.next ? page + 1 : undefined,
         previousPage: page > 1 ? page - 1 : undefined,
         characters: res.data,
       }
