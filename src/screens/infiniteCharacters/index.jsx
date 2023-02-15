@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from "react-query"
+import { useInfiniteQuery } from "react-query"
 import { getCharactersPaginated } from "../../api/characters";
 import BottomMedia from '../../components/bottomMedia';
 import { InfiniteCard } from '../../components/infiniteCard';

@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "title": "pollution is real",
+      "description": "we have to start thinking about the earth"
+    },
+    {
+      "title": "election",
+      "description": "Its important to vote"
+    },
+    {
+      "title": "What computer should you buy?",
+      "description": "I dont know, you pick one"
+    },
+    {
+      "title": "New post",
+      "description": "Posting here because I like it"
+    }
+  ]
+}
