@@ -14,12 +14,7 @@ export function InfiniteCharacters () {
     data,
   } = useInfiniteQuery('characters', ({pageParam = 1}) => getCharactersPaginated(pageParam), {
     getNextPageParam: prevData => prevData.nextPage,
-    select: (data) => ({
-      pages: data.pages.flatMap((x) => x),
-      pageParams: data.pageParams,
-    }),
   });
-
   
   return (
     <>
