@@ -1,0 +1,23 @@
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+export default function BottomMedia({
+  fetchNextPage,
+  hasNextPage,
+  isFetchingNextPage,
+}) {
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView && hasNextPage) {
+      fetchNextPage();
+    }
+  }, [inView]);
+
+  return (
+    <>
+      <div ref={ref} />
+      {isFetchingNextPage && <div>Loading more characters...</div>}
+    </>
+  );
+}

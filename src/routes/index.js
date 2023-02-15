@@ -1,4 +1,5 @@
 export const routes = {
   HOME: '/',
-  CHARACTERS: '/characters',
+  PAGINATION: '/pagination',
+  INFINITE: '/infinite',
 };
