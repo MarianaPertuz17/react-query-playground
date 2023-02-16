@@ -1,18 +1,6 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 300px [col-start]);
-  justify-content: space-around;
-  row-gap: 50px;
-}
-
-.buttonContainer {
-  margin-top: 8vh;
+.form {
   display: flex;
-  justify-content: space-between;
-}
-
-button {
-  height: 8vh;
-  min-width: 10vw;
-  cursor: pointer;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 30%;
 }
