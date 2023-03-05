@@ -6,7 +6,7 @@ export default function BottomMedia({
   hasNextPage,
   isFetchingNextPage,
 }) {
-  console.log("this is bottom mediass");
+  console.log("this is bottom medias never");
   const { ref, inView } = useInView();
 
   useEffect(() => {
